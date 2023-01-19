@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MatchAddActivity">
+
     <Button
         android:id="@+id/buttonAdd"
         android:layout_width="112dp"
@@ -26,34 +27,46 @@
         app:layout_constraintHorizontal_bias="0.181"
         app:layout_constraintStart_toEndOf="@+id/buttonAdd" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="139dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="48dp"
         android:layout_marginBottom="20dp"
-        android:text="Команда хозяев"
-        app:layout_constraintBottom_toTopOf="@+id/editTextHome"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.236"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginBottom="4dp"
-        android:text="Счет хозяев"
-        app:layout_constraintBottom_toTopOf="@+id/editTextHomeGol"
+    <EditText
+        android:id="@+id/editTextHomeGol"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="324dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAdd"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="244dp"
+        android:layout_marginStart="228dp"
         android:layout_marginBottom="4dp"
         android:text="Счет гостей"
         app:layout_constraintBottom_toTopOf="@+id/editTextGuestGol"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="12dp"
+        android:text="Команда хозяев"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -61,56 +74,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="80dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="12dp"
         android:text="Команда гостей"
-        app:layout_constraintBottom_toTopOf="@+id/editTextGuest"
+        app:layout_constraintBottom_toTopOf="@+id/spinner2"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/editTextHome"
-        android:layout_width="149dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="460dp"
-        android:ems="10"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextGuest"
-        android:layout_width="149dp"
-        android:layout_height="51dp"
-        android:layout_marginBottom="400dp"
-        android:ems="10"
-        android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/buttonExit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.273"
-        app:layout_constraintStart_toEndOf="@+id/editTextHome" />
-
-    <EditText
-        android:id="@+id/editTextHomeGol"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginBottom="324dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/buttonAdd"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
         android:id="@+id/editTextGuestGol"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="40dp"
         android:layout_marginBottom="324dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/buttonExit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toEndOf="@+id/editTextHomeGol"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="4dp"
+        android:text="Счет хозяев"
+        app:layout_constraintBottom_toTopOf="@+id/editTextHomeGol"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="139dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/spinner" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

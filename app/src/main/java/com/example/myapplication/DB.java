@@ -13,12 +13,15 @@ public class DB  extends SQLiteOpenHelper {
 
 
     public static final String MATCH_G = "MatchG";
+    public static final String Team = "Team";
     public static final String ID = "id";
     public static final String TEAM_HOME = "TeamHome";
     public static final String TEAM_GUEST = "TeamGuest";
     public static final String GOALS_HOME = "GoalsHome";
     public static final String GOL_GUEST = "GolGuest";
+    public static final String TEAM_Name = "TeamName";
     public static final String FOOT_DB = "Foot.db";
+
 
     public DB(@Nullable Context context) {
         super(context, FOOT_DB, null, 1);
@@ -27,12 +30,13 @@ public class DB  extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("Create Table " + MATCH_G + " (" + ID + " NTEGER PRIMARY KEY, " + TEAM_HOME + " Text, " + TEAM_GUEST + " Text, " + GOALS_HOME + " int, " + GOL_GUEST + " int)");
+        sqLiteDatabase.execSQL("Create Table " + Team + " (" + ID + " NTEGER PRIMARY KEY, " + TEAM_Name + " Text)");
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("drop table if exists Matchf");
-
         onCreate(sqLiteDatabase);
     }
 
